@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		EF5BC2A725CD932B004E8F36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5BC2A525CD932B004E8F36 /* Main.storyboard */; };
 		EF5BC2A925CD932D004E8F36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5BC2A825CD932D004E8F36 /* Assets.xcassets */; };
 		EF5BC2AC25CD932D004E8F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5BC2AA25CD932D004E8F36 /* LaunchScreen.storyboard */; };
+		EFBED72925D3E79500F661A0 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFBED72825D3E78F00F661A0 /* NanumGothic.otf */; };
+		EFBED72C25D3E95900F661A0 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFBED72B25D3E95600F661A0 /* NanumGothicBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		EF5BC2A825CD932D004E8F36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF5BC2AB25CD932D004E8F36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5BC2AD25CD932D004E8F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFBED72825D3E78F00F661A0 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.otf; sourceTree = "<group>"; };
+		EFBED72B25D3E95600F661A0 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
 		FBE4F2F53115BAD43F7483B5 /* Pods-DNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.debug.xcconfig"; path = "Target Support Files/Pods-DNA/Pods-DNA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +52,6 @@
 				FBE4F2F53115BAD43F7483B5 /* Pods-DNA.debug.xcconfig */,
 				9CC573ED038C08DCAAA75B74 /* Pods-DNA.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,49 @@
 		EF5BC29E25CD932B004E8F36 /* DNA */ = {
 			isa = PBXGroup;
 			children = (
+				EFBED72225D3E45800F661A0 /* UI */,
+				EFBED72125D3E44700F661A0 /* Models */,
+				EFBED72025D3E44200F661A0 /* VC */,
+				EFBED71F25D3E43200F661A0 /* Networking */,
 				EF5BC29F25CD932B004E8F36 /* AppDelegate.swift */,
 				EF5BC2A125CD932B004E8F36 /* SceneDelegate.swift */,
-				EF5BC2A325CD932B004E8F36 /* ViewController.swift */,
-				EF5BC2A525CD932B004E8F36 /* Main.storyboard */,
 				EF5BC2A825CD932D004E8F36 /* Assets.xcassets */,
 				EF5BC2AA25CD932D004E8F36 /* LaunchScreen.storyboard */,
+				EFBED72825D3E78F00F661A0 /* NanumGothic.otf */,
+				EFBED72B25D3E95600F661A0 /* NanumGothicBold.otf */,
 				EF5BC2AD25CD932D004E8F36 /* Info.plist */,
 			);
 			path = DNA;
+			sourceTree = "<group>";
+		};
+		EFBED71F25D3E43200F661A0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EFBED72025D3E44200F661A0 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BC2A325CD932B004E8F36 /* ViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		EFBED72125D3E44700F661A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFBED72225D3E45800F661A0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EF5BC2A525CD932B004E8F36 /* Main.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +191,8 @@
 				EF5BC2AC25CD932D004E8F36 /* LaunchScreen.storyboard in Resources */,
 				EF5BC2A925CD932D004E8F36 /* Assets.xcassets in Resources */,
 				EF5BC2A725CD932B004E8F36 /* Main.storyboard in Resources */,
+				EFBED72C25D3E95900F661A0 /* NanumGothicBold.otf in Resources */,
+				EFBED72925D3E79500F661A0 /* NanumGothic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

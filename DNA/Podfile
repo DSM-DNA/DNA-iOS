@@ -7,4 +7,5 @@ target 'DNA' do
 
   # Pods for DNA
 pod 'Alamofire', '~>5.2'
+pod 'DropDown'
 end
