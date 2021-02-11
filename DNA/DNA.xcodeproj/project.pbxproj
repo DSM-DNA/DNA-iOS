@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		AABF52AAB6BA03D93E14742B /* Pods_DNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C638AB1FF7A47177A5E8288 /* Pods_DNA.framework */; };
+		EF49835525D5730700357307 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49835425D5730700357307 /* LoginVC.swift */; };
+		EF49835825D5731900357307 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49835725D5731900357307 /* SignUpVC.swift */; };
+		EF49835B25D5733A00357307 /* LogoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49835A25D5733A00357307 /* LogoutVC.swift */; };
+		EF49835E25D5735000357307 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49835D25D5735000357307 /* MenuVC.swift */; };
+		EF49836125D573B300357307 /* WritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49836025D573B200357307 /* WritingVC.swift */; };
+		EF49836425D573EE00357307 /* AVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49836325D573EE00357307 /* AVC.swift */; };
+		EF49836725D573FB00357307 /* GVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49836625D573FB00357307 /* GVC.swift */; };
+		EF49836A25D5740500357307 /* TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49836925D5740500357307 /* TVC.swift */; };
+		EF49836D25D5740E00357307 /* CVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49836C25D5740E00357307 /* CVC.swift */; };
 		EF5BC2A025CD932B004E8F36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BC29F25CD932B004E8F36 /* AppDelegate.swift */; };
 		EF5BC2A225CD932B004E8F36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BC2A125CD932B004E8F36 /* SceneDelegate.swift */; };
 		EF5BC2A425CD932B004E8F36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5BC2A325CD932B004E8F36 /* ViewController.swift */; };
@@ -21,6 +30,15 @@
 /* Begin PBXFileReference section */
 		3C638AB1FF7A47177A5E8288 /* Pods_DNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC573ED038C08DCAAA75B74 /* Pods-DNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.release.xcconfig"; path = "Target Support Files/Pods-DNA/Pods-DNA.release.xcconfig"; sourceTree = "<group>"; };
+		EF49835425D5730700357307 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EF49835725D5731900357307 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		EF49835A25D5733A00357307 /* LogoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVC.swift; sourceTree = "<group>"; };
+		EF49835D25D5735000357307 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		EF49836025D573B200357307 /* WritingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingVC.swift; sourceTree = "<group>"; };
+		EF49836325D573EE00357307 /* AVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVC.swift; sourceTree = "<group>"; };
+		EF49836625D573FB00357307 /* GVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GVC.swift; sourceTree = "<group>"; };
+		EF49836925D5740500357307 /* TVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVC.swift; sourceTree = "<group>"; };
+		EF49836C25D5740E00357307 /* CVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVC.swift; sourceTree = "<group>"; };
 		EF5BC29C25CD932B004E8F36 /* DNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5BC29F25CD932B004E8F36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF5BC2A125CD932B004E8F36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +128,15 @@
 			isa = PBXGroup;
 			children = (
 				EF5BC2A325CD932B004E8F36 /* ViewController.swift */,
+				EF49835425D5730700357307 /* LoginVC.swift */,
+				EF49835725D5731900357307 /* SignUpVC.swift */,
+				EF49835A25D5733A00357307 /* LogoutVC.swift */,
+				EF49835D25D5735000357307 /* MenuVC.swift */,
+				EF49836025D573B200357307 /* WritingVC.swift */,
+				EF49836325D573EE00357307 /* AVC.swift */,
+				EF49836625D573FB00357307 /* GVC.swift */,
+				EF49836925D5740500357307 /* TVC.swift */,
+				EF49836C25D5740E00357307 /* CVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -245,9 +272,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF49836425D573EE00357307 /* AVC.swift in Sources */,
 				EF5BC2A425CD932B004E8F36 /* ViewController.swift in Sources */,
 				EF5BC2A025CD932B004E8F36 /* AppDelegate.swift in Sources */,
+				EF49835B25D5733A00357307 /* LogoutVC.swift in Sources */,
+				EF49836725D573FB00357307 /* GVC.swift in Sources */,
+				EF49835E25D5735000357307 /* MenuVC.swift in Sources */,
+				EF49836A25D5740500357307 /* TVC.swift in Sources */,
+				EF49835525D5730700357307 /* LoginVC.swift in Sources */,
+				EF49836D25D5740E00357307 /* CVC.swift in Sources */,
+				EF49835825D5731900357307 /* SignUpVC.swift in Sources */,
 				EF5BC2A225CD932B004E8F36 /* SceneDelegate.swift in Sources */,
+				EF49836125D573B300357307 /* WritingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
