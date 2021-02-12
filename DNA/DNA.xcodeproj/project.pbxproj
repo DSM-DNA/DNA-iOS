@@ -81,6 +81,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EF3D731F25D6B82900948B5E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EF49835425D5730700357307 /* LoginVC.swift */,
+				EF49835725D5731900357307 /* SignUpVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EF3D732225D6B85B00948B5E /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				EF49835A25D5733A00357307 /* LogoutVC.swift */,
+				EF49835D25D5735000357307 /* MenuVC.swift */,
+				EF49836025D573B200357307 /* WritingVC.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		EF3D732525D6B87800948B5E /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				EF49836325D573EE00357307 /* AVC.swift */,
+				EF49836625D573FB00357307 /* GVC.swift */,
+				EF49836925D5740500357307 /* TVC.swift */,
+				EF49836C25D5740E00357307 /* CVC.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		EF5BC29325CD932B004E8F36 = {
 			isa = PBXGroup;
 			children = (
@@ -128,15 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				EF5BC2A325CD932B004E8F36 /* ViewController.swift */,
-				EF49835425D5730700357307 /* LoginVC.swift */,
-				EF49835725D5731900357307 /* SignUpVC.swift */,
-				EF49835A25D5733A00357307 /* LogoutVC.swift */,
-				EF49835D25D5735000357307 /* MenuVC.swift */,
-				EF49836025D573B200357307 /* WritingVC.swift */,
-				EF49836325D573EE00357307 /* AVC.swift */,
-				EF49836625D573FB00357307 /* GVC.swift */,
-				EF49836925D5740500357307 /* TVC.swift */,
-				EF49836C25D5740E00357307 /* CVC.swift */,
+				EF3D731F25D6B82900948B5E /* Auth */,
+				EF3D732225D6B85B00948B5E /* Tab Bar */,
+				EF3D732525D6B87800948B5E /* TableView */,
 			);
 			path = VC;
 			sourceTree = "<group>";
