@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AABF52AAB6BA03D93E14742B /* Pods_DNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C638AB1FF7A47177A5E8288 /* Pods_DNA.framework */; };
+		EF2B79D125E2A33A00EB6A56 /* httpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B79D025E2A33A00EB6A56 /* httpClient.swift */; };
+		EF2B79D425E2A34100EB6A56 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B79D325E2A34100EB6A56 /* NetworkingAPI.swift */; };
 		EF49835525D5730700357307 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49835425D5730700357307 /* LoginVC.swift */; };
 		EF49835825D5731900357307 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49835725D5731900357307 /* SignUpVC.swift */; };
 		EF49835B25D5733A00357307 /* LogoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF49835A25D5733A00357307 /* LogoutVC.swift */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		3C638AB1FF7A47177A5E8288 /* Pods_DNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC573ED038C08DCAAA75B74 /* Pods-DNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.release.xcconfig"; path = "Target Support Files/Pods-DNA/Pods-DNA.release.xcconfig"; sourceTree = "<group>"; };
+		EF2B79D025E2A33A00EB6A56 /* httpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = httpClient.swift; sourceTree = "<group>"; };
+		EF2B79D325E2A34100EB6A56 /* NetworkingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
 		EF49835425D5730700357307 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		EF49835725D5731900357307 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		EF49835A25D5733A00357307 /* LogoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVC.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 		EFBED71F25D3E43200F661A0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EF2B79D025E2A33A00EB6A56 /* httpClient.swift */,
+				EF2B79D325E2A34100EB6A56 /* NetworkingAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -305,9 +311,11 @@
 				EF49836A25D5740500357307 /* TVC.swift in Sources */,
 				EF49835525D5730700357307 /* LoginVC.swift in Sources */,
 				EF49836D25D5740E00357307 /* CVC.swift in Sources */,
+				EF2B79D125E2A33A00EB6A56 /* httpClient.swift in Sources */,
 				EF49835825D5731900357307 /* SignUpVC.swift in Sources */,
 				EF5BC2A225CD932B004E8F36 /* SceneDelegate.swift in Sources */,
 				EF49836125D573B300357307 /* WritingVC.swift in Sources */,
+				EF2B79D425E2A34100EB6A56 /* NetworkingAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

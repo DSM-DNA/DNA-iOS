@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C1355509-BADF-4698-B77F-CCE3931F7498"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C83C2740-E228-4815-A6E6-A3F8DB2FE050"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DNA/VC/Tab Bar/WritingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "setCategoryButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C83C2740-E228-4815-A6E6-A3F8DB2FE050 - 131f02b418917f78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DNA.WritingVC.setCategoryButton(__C.UIButton) -&gt; ()"
+                  moduleName = "DNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangseoyoung/Documents/GitHub/DNA-iOS/DNA/DNA/VC/Tab%20Bar/WritingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1014">
+               </Location>
+               <Location
+                  uuid = "C83C2740-E228-4815-A6E6-A3F8DB2FE050 - d6b2727b264a29e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, Swift.String) -&gt; () in DNA.WritingVC.setCategoryButton(__C.UIButton) -&gt; ()"
+                  moduleName = "DNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangseoyoung/Documents/GitHub/DNA-iOS/DNA/DNA/VC/Tab%20Bar/WritingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "734FFA34-4D3F-4AB7-BA32-E74ABE128FF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DNA/VC/Tab Bar/WritingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "setCategoryButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
