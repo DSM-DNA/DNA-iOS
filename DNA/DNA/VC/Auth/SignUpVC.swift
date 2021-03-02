@@ -14,10 +14,18 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var confirmEmailButton: UIButton!
     @IBOutlet weak var warningLabel: UILabel!
-    @IBOutlet weak var pwTxt: UITextField!
-    @IBOutlet weak var confirmPwTxt: UITextField!
+    @IBOutlet weak var pwTxt: UITextField!{
+        didSet {
+            pwTxt.isSecureTextEntry = true
+        }
+    }
+    @IBOutlet weak var confirmPwTxt: UITextField!{
+        didSet {
+            confirmPwTxt.isSecureTextEntry = true
+        }
+    }
     @IBOutlet weak var signUpButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +39,10 @@ class SignUpVC: UIViewController {
         warningLabel.isHidden = true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func confirmEmailButton(_ sender: UIButton){
         
     }
@@ -38,15 +50,15 @@ class SignUpVC: UIViewController {
     @IBAction func signUpButton(_ sender: UIButton){
         
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

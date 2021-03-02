@@ -27,6 +27,7 @@
 		EF5BC2AC25CD932D004E8F36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5BC2AA25CD932D004E8F36 /* LaunchScreen.storyboard */; };
 		EFBED72925D3E79500F661A0 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFBED72825D3E78F00F661A0 /* NanumGothic.otf */; };
 		EFBED72C25D3E95900F661A0 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFBED72B25D3E95600F661A0 /* NanumGothicBold.otf */; };
+		EFCC7F3025EE293600D41BC4 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC7F2F25EE293600D41BC4 /* SignInModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		EF5BC2AD25CD932D004E8F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFBED72825D3E78F00F661A0 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.otf; sourceTree = "<group>"; };
 		EFBED72B25D3E95600F661A0 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
+		EFCC7F2F25EE293600D41BC4 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		FBE4F2F53115BAD43F7483B5 /* Pods-DNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNA.debug.xcconfig"; path = "Target Support Files/Pods-DNA/Pods-DNA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 		EFBED72125D3E44700F661A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC7F2F25EE293600D41BC4 /* SignInModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				EF5BC2A225CD932B004E8F36 /* SceneDelegate.swift in Sources */,
 				EF49836125D573B300357307 /* WritingVC.swift in Sources */,
 				EF2B79D425E2A34100EB6A56 /* NetworkingAPI.swift in Sources */,
+				EFCC7F3025EE293600D41BC4 /* SignInModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G67LV27Z4;
 				INFOPLIST_FILE = DNA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,6 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8G67LV27Z4;
 				INFOPLIST_FILE = DNA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

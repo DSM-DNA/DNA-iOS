@@ -107,7 +107,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ltd-4c-fdn" kind="show" id="fmm-7a-PAZ"/>
+                                    <segue destination="Ltd-4c-fdn" kind="show" id="OCK-j8-pMP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="twC-bF-CLI">
@@ -191,7 +191,7 @@
         <!--MenuVC-->
         <scene sceneID="ZwP-Fz-A2b">
             <objects>
-                <viewController id="9iA-L8-YjJ" customClass="MenuVC" customModule="DNA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuVC" id="9iA-L8-YjJ" customClass="MenuVC" customModule="DNA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ygI-0Z-0IO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZs-bX-vx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3584.8000000000002" y="1549.5073891625616"/>
+            <point key="canvasLocation" x="3585" y="1550"/>
         </scene>
         <!--AVC-->
         <scene sceneID="XvG-tl-884">
@@ -1047,20 +1047,13 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-eR-CLx">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-eR-CLx">
                                 <rect key="frame" x="39" y="179" width="299" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="카테고리를 설정해 주세요">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="12" name="NanumGothic"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="12"/>
+                                <state key="normal" title="카테고리를 설정해 주세요">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
                                     <action selector="setCategoryButton:" destination="6Vp-4K-TRF" eventType="touchUpInside" id="u3j-cE-RtM"/>
@@ -1268,8 +1261,8 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vIa-vi-1Zq" kind="relationship" relationship="viewControllers" id="cej-Ga-OWh"/>
                         <segue destination="9iA-L8-YjJ" kind="relationship" relationship="viewControllers" id="Rh0-Bi-aye"/>
+                        <segue destination="vIa-vi-1Zq" kind="relationship" relationship="viewControllers" id="cej-Ga-OWh"/>
                         <segue destination="6Vp-4K-TRF" kind="relationship" relationship="viewControllers" id="q4s-iG-aZg"/>
                     </connections>
                 </tabBarController>
