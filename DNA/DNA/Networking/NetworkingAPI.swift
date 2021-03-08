@@ -8,9 +8,10 @@
 import Foundation
 import Alamofire
 
+
 enum NetworkingAPI{
+    case email
     case refreshToken
-    case ConfirmEmail(_ isCorrect: Bool)
     case SignUp(_ name: String, _ email: String, _ password: String)
     case Login(_ email: String, _ password: String)
     case CommentList(_ size: Int, _ page: Int)
@@ -18,12 +19,12 @@ enum NetworkingAPI{
     
     var path: String {
         switch self {
-        case .Login :
+        case .email :
+            return "/email?email=" + ConfirmEmail
+        case .Login, .refreshToken :
             return "/auth"
         case .SignUp :
             return "/signup"
-        case .ConfirmEmail :
-            return "/email"
         case .CommentList, .CommentWr :
             return "/comment"
         }
@@ -31,18 +32,23 @@ enum NetworkingAPI{
     
     var headers: HTTPHeaders? {
         switch self {
-        case .Login, .SignUp:
+        case .Login, .SignUp, .email:
             return nil
         case .refreshToken :
             let refreshToken : String = "token"
             let userDefault = UserDefaults.standard
             userDefault.set(refreshToken, forKey: "refresh-Token")
-            userDefault.synchronize()
+            userDefault.synchronize(  )
             guard let token = userDefault.string(forKey: "refresh-Token") else {return nil}
             return ["Authorization" : "Bearer" + "token"]
             
         default:
-            
+            let accessToken : String = "access-token"
+            let userDefault = UserDefaults.standard
+            userDefault.set(accessToken, forKey: "access-token")
+            userDefault.synchronize( )
+            guard let token = userDefault.string(forKey: "access-token") else { return nil }
+            return ["Authorization" : "Bearer" + "token"]
         }
     }
     
@@ -55,6 +61,7 @@ enum NetworkingAPI{
         case .SignUp(let name, let email, let password):
             print(["name":name, "email":email, "password":password])
             return ["name":name, "email":email, "password":password]
+            
         default:
             return [:]
         }

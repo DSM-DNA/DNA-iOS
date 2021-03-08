@@ -1172,21 +1172,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-f1-oZO">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGO-f1-oZO">
                                 <rect key="frame" x="263" y="434" width="45" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1764705882352941" green="0.2627450980392157" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="중복체크">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="8" name="NanumGothic"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="8"/>
+                                <state key="normal" title="중복체크">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmEmailButton:" destination="Ngi-ir-gar" eventType="touchUpInside" id="3cc-j0-PJa"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="로그인" translatesAutoresizingMaskIntoConstraints="NO" id="vRR-iq-t2m">
                                 <rect key="frame" x="33" y="102" width="309" height="164"/>
@@ -1217,7 +1213,7 @@
                     <navigationItem key="navigationItem" id="aZM-Re-Cmp"/>
                     <connections>
                         <outlet property="circle" destination="B13-E5-fNh" id="tQs-80-wyS"/>
-                        <outlet property="confirmEmailButton" destination="qGO-f1-oZO" id="s2j-HE-hMu"/>
+                        <outlet property="confirmEmailButton" destination="qGO-f1-oZO" id="YRj-LT-HuN"/>
                         <outlet property="confirmPwTxt" destination="Pjh-nf-Qlq" id="9Vb-F4-tcX"/>
                         <outlet property="emailTxt" destination="pIr-82-bOa" id="qdL-Dk-9pX"/>
                         <outlet property="nameTxt" destination="CdS-MR-8vF" id="qoh-I5-g21"/>

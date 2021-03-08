@@ -19,11 +19,11 @@ class HTTPClient: HTTPCleintProvider {
     let baseURL = "http://211.38.86.92:8080"
     
     func get(_ api: NetworkingAPI) -> DataRequest {
-        return AF.request(baseURL + api.path, method: .get, parameters: api.parameters, encoding: JSONEncoding.prettyPrinted, headers: api.headers, interceptor: nil)
+        return AF.request(baseURL + api.path, method: .get, parameters: api.parameters, encoding: URLEncoding.default, headers: api.headers, interceptor: nil)
     }
     
     func post(_ api: NetworkingAPI) -> DataRequest {
-        return AF.request(baseURL + api.path, method: .post, parameters: api.parameters, encoding: URLEncoding.default, headers: api.headers, interceptor: nil)
+        return AF.request(baseURL + api.path, method: .post, parameters: api.parameters, encoding:JSONEncoding.prettyPrinted, headers: api.headers, interceptor: nil)
     }
     
     func put(_ api: NetworkingAPI) -> DataRequest {
