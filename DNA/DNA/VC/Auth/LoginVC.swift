@@ -45,6 +45,7 @@ class LoginVC: UIViewController {
     }
     
     func SignIn(email: String, password: String){
+        print("로그인")
         httpClient.post(.Login(email, password)).responseJSON(completionHandler: {(response) in
             switch response.response?.statusCode {
             case 201:
