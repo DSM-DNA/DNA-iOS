@@ -13,7 +13,7 @@ protocol HTTPCleintProvider {
     func post(url: String, params: Parameters?, header: HTTPHeaders) -> DataRequest
     func put(url: String, params: Parameters?, header: HTTPHeaders) -> DataRequest
     func delete(url: String, params: Parameters?, header: HTTPHeaders) -> DataRequest
-    
+    func patch(url: String, params: Parameters?, header: HTTPHeaders) -> DataRequest
 }
 
 class HTTPClient: HTTPCleintProvider {
@@ -50,6 +50,15 @@ class HTTPClient: HTTPCleintProvider {
     func delete(url: String, params: Parameters?, header: HTTPHeaders) -> DataRequest {
         return AF.request(baseURL + url,
                           method: .delete,
+                          parameters: params,
+                          encoding: JSONEncoding.prettyPrinted,
+                          headers: header,
+                          interceptor: nil)
+    }
+    
+    func patch(url: String, params: Parameters?, header: HTTPHeaders) -> DataRequest {
+        return AF.request(baseURL + url,
+                          method: .patch,
                           parameters: params,
                           encoding: JSONEncoding.prettyPrinted,
                           headers: header,

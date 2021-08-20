@@ -8,7 +8,8 @@
 import Foundation
 
 enum AuthAPI : API {
-    case email(_ confirmId: String)
+    case sendEmail
+    case confirmNum
     case refreshToken
     case signUp
     case Login
@@ -16,8 +17,8 @@ enum AuthAPI : API {
     
     func path() -> String {
         switch self {
-        case .email(let confirmId) :
-            return "/email?email=" + confirmId
+        case .sendEmail, .confirmNum :
+            return "/email"
         case .Login, .refreshToken :
             return "/auth"
         case .Logout:

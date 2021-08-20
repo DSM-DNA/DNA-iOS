@@ -13,6 +13,7 @@ final class AViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private var MainListModel = MainList()
     private var timeLine : [TimeLine] = [TimeLine]()
+    private var id = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +36,14 @@ final class AViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "ACell") as! ACell
         
         let date = MainListModel.timelineResponses[indexPath.row].createdAt
-        
+        id = MainListModel.timelineResponses[indexPath.row].timelineId
         cell.nameLabel.text = MainListModel.timelineResponses[indexPath.row].name
         cell.titleLabel.text = MainListModel.timelineResponses[indexPath.row].title
         cell.detailTxt.text = MainListModel.timelineResponses[indexPath.row].content
         cell.yearMonthLabel.text = yearMonthFormat(date: date)
         cell.dayLabel.text = dayFormat(date: date)
+        cell.deleteBtn.tag = indexPath.row
+        cell.deleteBtn.addTarget(self, action: #selector(postDelete(sender:)), for: .touchUpInside)
         return cell
     }
     
@@ -91,6 +94,39 @@ final class AViewController: UIViewController, UITableViewDelegate, UITableViewD
                 errorAlert()
             }
         })
+    }
+    
+    private func deletePost(id: Int){
+        HTTPClient().delete(url: ListAPI.deleteTimeLine(id).path(), params: nil, header: Header.token.header())
+            .responseJSON(completionHandler: {[unowned self]res in
+                switch res.response?.statusCode {
+                case 200:
+                    getList()
+                    tableView.reloadData()
+                case 400:
+                    print("400 - BAD REQUEST")
+                    errorAlert()
+                case 401:
+                    print("401 - UNAUTHORIZED")
+                    errorAlert()
+                case 403:
+                    print("403 - FORBIDDEN")
+                    showAlert(title: "권한이 없습니다.", message: "게시물을 삭제할 수 없습니다.", action: nil, actionTitle: "확인")
+                case 404:
+                    print("404 - NOT FOUND - comment")
+                    errorAlert()
+                case 409:
+                    print("409 - CONFLICT")
+                    errorAlert()
+                default:
+                    print(res.response?.statusCode)
+                    errorAlert()
+                }
+            })
+    }
+    
+    @objc private func postDelete(sender: UIButton){
+        warningAlert(title: "게시물을 삭제하시겠습니까?", message: "삭제한 게시물은 되돌릴 수 없습니다.", action: {[unowned self]action in deletePost(id: id)}, actionTitle: "예", cancelActionTitle: "아니오")
     }
     
 }

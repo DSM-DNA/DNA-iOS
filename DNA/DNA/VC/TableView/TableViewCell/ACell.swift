@@ -21,6 +21,8 @@ class ACell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        yearMonthLabel.adjustsFontSizeToFitWidth = true
+        nameLabel.adjustsFontSizeToFitWidth = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

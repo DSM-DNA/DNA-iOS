@@ -13,8 +13,10 @@ final class SignUpViewController: UIViewController {
     @IBOutlet weak private var circle: UIView!
     @IBOutlet weak private var nameTxt: UITextField!
     @IBOutlet weak private var emailTxt: UITextField!
-    @IBOutlet weak private var confirmEmailButton: UIButton!
+    @IBOutlet weak private var sendEmailButton: UIButton!
     @IBOutlet weak private var warningLabel: UILabel!
+    @IBOutlet weak private var confirmNumTxt: UITextField!
+    @IBOutlet weak private var confirmNumButton: UIButton!
     @IBOutlet weak private var pwTxt: UITextField!{
         didSet {
             pwTxt.isSecureTextEntry = true
@@ -28,12 +30,14 @@ final class SignUpViewController: UIViewController {
     @IBOutlet weak private var signUpButton: UIButton!
     
     private let id = String()
+    private var isConfirmed : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
         emailTxt.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
         nameTxt.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
+        confirmNumTxt.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
         confirmPwTxt.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
         pwTxt.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
     }
@@ -42,26 +46,51 @@ final class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction private func confirmEmailButton(_ sender: UIButton){
-        HTTPClient().get(url: AuthAPI.email(id).path(), params: nil, header: Header.tokenIsEmpty.header()).responseJSON(completionHandler: {
+    @IBAction private func sendEmailButton(_ sender: UIButton){
+        HTTPClient().post(url: AuthAPI.sendEmail.path(), params: ["email":emailTxt.text!], header: Header.tokenIsEmpty.header()).responseJSON(completionHandler: {
             [unowned self] response in
             switch response.response?.statusCode {
-            case 200 :
+            case 201 :
                 print("SUCCESS")
-                confirmEmailButton.setTitle("확인완료", for: .normal)
-            case 400: print("BAD REQUEST")
-                confirmEmailButton.setTitle("확인불가", for: .normal)
+                showAlert(title: "인증번호가 메일로 전송되었습니다.", message: nil, action: nil, actionTitle: "확인")
+            case 400:
+                print("BAD REQUEST")
+                showAlert(title: "인증번호 전송에 실패했습니다.", message: nil, action: nil, actionTitle: "확인")
             default : print(response.error ?? 0)
                 errorAlert()
             }
         })
     }
     
+    @IBAction private func confirmNumButton(_ sender: UIButton){
+        HTTPClient().patch(url: AuthAPI.confirmNum.path(), params: ["email":"\(emailTxt.text!)", "verifyCode":"\(confirmNumTxt.text!)"], header: Header.tokenIsEmpty.header()).responseJSON(completionHandler: {
+            [unowned self] response in
+            switch response.response?.statusCode {
+            case 200 :
+                print("SUCCESS")
+                isConfirmed = true
+                showAlert(title: "이메일 인증에 성공하셨습니다.", message: nil, action: nil, actionTitle: "확인")
+            case 400:
+                print("BAD REQUEST")
+                showAlert(title: "인증번호가 잘못되었습니다.", message: "다시 시도해 주십시오.", action: nil, actionTitle: "확인")
+                confirmNumTxt.text = ""
+            default : print(response.response?.statusCode)
+                errorAlert()
+            }
+        })
+    }
+    
     @IBAction private func signUpButton(_ sender: UIButton){
-        guard let Name = nameTxt.text else {return}
-        guard let Email = emailTxt.text else {return}
-        guard let Password = pwTxt.text else {return}
-        signUp(name: Name, email: Email, password: Password)
+        if(nameTxt.text == "" || emailTxt.text == "" || pwTxt.text == "" || confirmNumTxt.text == "" || isConfirmed == false){
+            showAlert(title: "회원가입이 불가능합니다.", message: "빈칸이나 인증번호를 다시 한번 확인해 주세요.", action: nil, actionTitle: "확인")
+        }
+        
+        else {
+            guard let Name = nameTxt.text else {return}
+            guard let Email = emailTxt.text else {return}
+            guard let Password = pwTxt.text else {return}
+            signUp(name: Name, email: Email, password: Password)
+        }
     }
     
     private func signUp(name: String, email: String, password: String){
